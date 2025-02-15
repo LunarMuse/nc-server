@@ -121,7 +121,7 @@
 			</h3>
 			<div v-for="providerResult in results" :key="providerResult.id" class="result">
 				<h4 :id="`unified-search-result-${providerResult.id}`" class="result-title">
-					{{ providerResult.provider }}
+					{{ providerResult.name }}
 				</h4>
 				<ul class="result-items" :aria-labelledby="`unified-search-result-${providerResult.id}`">
 					<SearchResult v-for="(result, index) in providerResult.results"
@@ -129,14 +129,14 @@
 						v-bind="result" />
 				</ul>
 				<div class="result-footer">
-					<NcButton type="tertiary-no-background" @click="loadMoreResultsForProvider(providerResult.id)">
+					<NcButton type="tertiary-no-background" @click="loadMoreResultsForProvider(providerResult)">
 						{{ t('core', 'Load more results') }}
 						<template #icon>
 							<IconDotsHorizontal :size="20" />
 						</template>
 					</NcButton>
 					<NcButton v-if="providerResult.inAppSearch" alignment="end-reverse" type="tertiary-no-background">
-						{{ t('core', 'Search in') }} {{ providerResult.provider }}
+						{{ t('core', 'Search in') }} {{ providerResult.name }}
 						<template #icon>
 							<IconArrowRight :size="20" />
 						</template>
@@ -374,7 +374,7 @@ export default defineComponent({
 			const providersToSearch = this.filteredProviders.length > 0 ? this.filteredProviders : this.providers
 			const searchProvider = (provider, filters) => {
 				const params = {
-					type: provider.id,
+					type: provider.searchFrom ?? provider.id,
 					query,
 					cursor: null,
 					extraQueries: provider.extraParams,
@@ -397,6 +397,7 @@ export default defineComponent({
 
 				if (this.providerResultLimit > 5) {
 					params.limit = this.providerResultLimit
+					unifiedSearchLogger.debug('Limiting search to', params.limit)
 				}
 
 				const request = unifiedSearch(params).request
@@ -404,7 +405,10 @@ export default defineComponent({
 				request().then((response) => {
 					newResults.push({
 						id: provider.id,
-						provider: provider.name,
+						appId: provider.appId,
+						searchFrom: provider.searchFrom,
+						icon: provider.icon,
+						name: provider.name,
 						inAppSearch: provider.inAppSearch,
 						results: response.data.ocs.data.entries,
 					})
@@ -498,16 +502,28 @@ export default defineComponent({
 			this.debouncedFind(this.searchQuery)
 			unifiedSearchLogger.debug('Person filter applied', { person })
 		},
-		loadMoreResultsForProvider(providerId) {
+		async loadMoreResultsForProvider(provider) {
 			this.providerResultLimit += 5
-			this.filters = this.filters.filter(filter => filter.type !== 'provider')
-			const provider = this.providers.find(provider => provider.id === providerId)
+			// If load more result for filter, remove other filters
+			this.filters = this.filters.filter(filter => filter.id === provider.id)
+			this.filteredProviders = this.filteredProviders.filter(filteredProvider => filteredProvider.id === provider.id)
+			// Plugin filters may have extra parameters, so we need to keep them
+			// See method handlePluginFilter for more details
+			if (this.filteredProviders.length > 0 && this.filteredProviders[0].isPluginFilter) {
+				provider = this.filteredProviders[0]
+			}
 			this.addProviderFilter(provider, true)
 		},
 		addProviderFilter(providerFilter, loadMoreResultsForProvider = false) {
+			unifiedSearchLogger.debug('Applying provider filter', { providerFilter, loadMoreResultsForProvider })
 			if (!providerFilter.id) return
 			if (providerFilter.isPluginFilter) {
-				providerFilter.callback()
+				// There is no way to know what should go into the callback currently
+				// Here we are passing isProviderFilterApplied (boolean) which is a flag sent to the plugin
+				// This is sent to the plugin so that depending on whether the filter is applied or not, the plugin can decide what to do
+				// TODO : In nextcloud/search, this should be a proper interface that the plugin can implement
+				const isProviderFilterApplied = this.filteredProviders.some(provider => provider.id === providerFilter.id)
+				providerFilter.callback(!isProviderFilterApplied)
 			}
 			this.providerResultLimit = loadMoreResultsForProvider ? this.providerResultLimit : 5
 			this.providerActionMenuIsOpen = false
@@ -520,11 +536,8 @@ export default defineComponent({
 				this.filters = this.syncProviderFilters(this.filters, this.filteredProviders)
 			}
 			this.filteredProviders.push({
-				id: providerFilter.id,
-				name: providerFilter.name,
-				icon: providerFilter.icon,
+				...providerFilter,
 				type: providerFilter.type || 'provider',
-				filters: providerFilter.filters,
 				isPluginFilter: providerFilter.isPluginFilter || false,
 			})
 			this.filters = this.syncProviderFilters(this.filters, this.filteredProviders)
@@ -649,6 +662,7 @@ export default defineComponent({
 			this.updateDateFilter()
 		},
 		handlePluginFilter(addFilterEvent) {
+			unifiedSearchLogger.debug('Handling plugin filter', { addFilterEvent })
 			for (let i = 0; i < this.filteredProviders.length; i++) {
 				const provider = this.filteredProviders[i]
 				if (provider.id === addFilterEvent.id) {

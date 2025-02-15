@@ -62,6 +62,7 @@ OC.L10N.register(
     "Enable Path Style" : "Povolit Path Style",
     "Legacy (v2) authentication" : "Starší (v2) ověřování",
     "Enable multipart copy" : "Povolit kopii o více částech",
+    "SSE-C encryption key" : "klíč šifrování SSE-C",
     "WebDAV" : "WebDAV",
     "URL" : "URL",
     "Remote subfolder" : "Federovaná podsložka",
@@ -149,7 +150,6 @@ OC.L10N.register(
     "All people" : "Všichni lidé",
     "Advanced settings" : "Pokročilá nastavení",
     "Allow people to mount external storage" : "Povolit lidem připojovat externí úložiště",
-    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Globální přihlašovací údaje je možné použít pro ověření se vůči vícero externím úložištím, která mají stejné přihlašovací údaje.",
-    "To access the storage, you need to provide the authentification informations." : "Abyste mohli přistupovat k úložišti, je třeba poskytnout ověřovací přihlašovací údaje."
+    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Globální přihlašovací údaje je možné použít pro ověření se vůči vícero externím úložištím, která mají stejné přihlašovací údaje."
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

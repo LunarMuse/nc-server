@@ -151,12 +151,10 @@ OC.L10N.register(
     "Second" : "Másodperc",
     "Third" : "Harmadik",
     "Fourth" : "Negyedik",
-    "Fifty" : "Ötödik",
     "Last" : "Utolsó",
     "Second Last" : "Második Utolsó",
     "Third Last" : "Harmadik Utolsó",
     "Fourth Last" : "Negyedik Utolsó",
-    "Fifty Last" : "Ötödik Utolsó",
     "Contacts" : "Névjegyek",
     "{actor} created address book {addressbook}" : "{actor} létrehozta a következő címjegyzéket: {addressbook}",
     "You created address book {addressbook}" : "Létrehozta a következő címjegyzéket: {addressbook}",
@@ -270,8 +268,6 @@ OC.L10N.register(
     "Time:" : "Idő:",
     "Could not open file" : "A fájl nem nyitható meg",
     "Invalid chunk name" : "Érvénytelen darabnév",
-    "Could not rename part file assembled from chunks" : "Nem lehet átnevezni a darabokból összeállított részleges fájlt",
-    "In %1$s %2$s on %3$s for the entire day" : "%1$s-en %2$s %3$s-kor az teljes napra",
-    "In %1$s %2$s on %3$s between %4$s - %5$s" : "%1$s %2$s múlva, %3$s napon %4$s - %5$s"
+    "Could not rename part file assembled from chunks" : "Nem lehet átnevezni a darabokból összeállított részleges fájlt"
 },
 "nplurals=2; plural=(n != 1);");

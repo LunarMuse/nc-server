@@ -114,7 +114,7 @@ This file is generated from multiple sources. Included packages:
 	- version: 1.0.7
 	- license: MIT
 - axios
-	- version: 1.7.7
+	- version: 1.7.9
 	- license: MIT
 - balanced-match
 	- version: 1.0.2
@@ -270,7 +270,7 @@ This file is generated from multiple sources. Included packages:
 	- version: 0.12.7
 	- license: MIT
 - pinia
-	- version: 2.3.0
+	- version: 2.3.1
 	- license: MIT
 - possible-typed-array-names
 	- version: 1.0.0

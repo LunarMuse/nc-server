@@ -62,6 +62,7 @@ OC.L10N.register(
     "Enable Path Style" : "Accès par path",
     "Legacy (v2) authentication" : "Authentification héritée (v2)",
     "Enable multipart copy" : "Activer la copie multiple",
+    "SSE-C encryption key" : "Clé de chiffrement SSE-C",
     "WebDAV" : "WebDAV",
     "URL" : "URL",
     "Remote subfolder" : "Sous-dossier distant",
@@ -149,7 +150,6 @@ OC.L10N.register(
     "All people" : "Toutes les personnes",
     "Advanced settings" : "Paramètres avancés",
     "Allow people to mount external storage" : "Autoriser les personnes à monter des espaces de stockage externes",
-    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Les identifiants globaux peuvent être utilisés pour s'authentifier auprès de multiples stockages externes qui ont les mêmes identifiants.",
-    "To access the storage, you need to provide the authentification informations." : "Pour accéder au stockage, vous devez fournir les informations d'authentification."
+    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Les identifiants globaux peuvent être utilisés pour s'authentifier auprès de multiples stockages externes qui ont les mêmes identifiants."
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

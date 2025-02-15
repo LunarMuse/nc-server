@@ -12,7 +12,7 @@ OC.L10N.register(
     "Invalid backend or authentication mechanism class" : "Ungültiger Backend- oder Authentifizierungsmechanismus",
     "Invalid mount point" : "Ungültiger Einbindungspunkt",
     "Objectstore forbidden" : "Objekt nicht erlaubt",
-    "Invalid storage backend \"%s\"" : "Ungültiges Speicher-Backend „%s“",
+    "Invalid storage backend \"%s\"" : "Ungültiges Speicher-Backend \"%s\"",
     "Not permitted to use backend \"%s\"" : "Es ist nicht zulässig Backend \"%s\" zu verwenden",
     "Not permitted to use authentication mechanism \"%s\"" : "Es ist nicht zulässig Authentifizierungsmechanismus \"%s\" zu verwenden",
     "Unsatisfied backend parameters" : "Unbefriedigende Backend-Parameter",
@@ -49,7 +49,7 @@ OC.L10N.register(
     "Public key" : "Öffentlicher Schlüssel",
     "RSA private key" : "RSA privater Schlüssel",
     "Private key" : "Privater Schlüssel",
-    "Kerberos default realm, defaults to \"WORKGROUP\"" : "Kerberos-Standard-Realm, standardmäßig „WORKGROUP“",
+    "Kerberos default realm, defaults to \"WORKGROUP\"" : "Kerberos-Standard-Realm, standardmäßig \"WORKGROUP\"",
     "Kerberos ticket Apache mode" : "Kerberos-Ticket Apache-Modus",
     "Kerberos ticket" : "Kerberos-Ticket",
     "Amazon S3" : "Amazon S3",
@@ -62,6 +62,7 @@ OC.L10N.register(
     "Enable Path Style" : "Pfadstil aktivieren",
     "Legacy (v2) authentication" : "Legacy-Authentifizierung (V2)",
     "Enable multipart copy" : "Multipart-Kopieren aktivieren",
+    "SSE-C encryption key" : "SSE-C-Schlüssel",
     "WebDAV" : "WebDAV",
     "URL" : "URL",
     "Remote subfolder" : "Entfernter Unterordner",
@@ -149,7 +150,6 @@ OC.L10N.register(
     "All people" : "Alle Personen",
     "Advanced settings" : "Erweiterte Einstellungen",
     "Allow people to mount external storage" : "Personen erlauben, externen Speicher einzubinden",
-    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Globale Zugangsdaten können für die Authentifizierung für mehrere externe Speicher verwendet werden, solange sie identische Zugangsdaten benötigen.",
-    "To access the storage, you need to provide the authentification informations." : "Um auf den Speicher zuzugreifen, müssen Sie die Authentifizierungsinformationen eingeben."
+    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Globale Zugangsdaten können für die Authentifizierung für mehrere externe Speicher verwendet werden, solange sie identische Zugangsdaten benötigen."
 },
 "nplurals=2; plural=(n != 1);");

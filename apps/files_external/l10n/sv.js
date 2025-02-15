@@ -62,6 +62,7 @@ OC.L10N.register(
     "Enable Path Style" : "Aktivera Path Style",
     "Legacy (v2) authentication" : "Legacy (v2) autentisering",
     "Enable multipart copy" : "Aktivera flerdelad kopiering",
+    "SSE-C encryption key" : "SSE-C krypteringsnyckel",
     "WebDAV" : "WebDAV",
     "URL" : "Webbadress",
     "Remote subfolder" : "Extern undermapp",
@@ -149,7 +150,6 @@ OC.L10N.register(
     "All people" : "Alla användare",
     "Advanced settings" : "Avancerade inställningar",
     "Allow people to mount external storage" : "Tillåt användare att montera extern lagring",
-    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Globala användaruppgifter kan användas för att autentisera med flera externa lagrings-instanser som använder samma användaruppgifter.",
-    "To access the storage, you need to provide the authentification informations." : "För att komma åt lagringen måste du tillhandahålla autentiseringsinformationen."
+    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Globala användaruppgifter kan användas för att autentisera med flera externa lagrings-instanser som använder samma användaruppgifter."
 },
 "nplurals=2; plural=(n != 1);");

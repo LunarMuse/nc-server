@@ -62,6 +62,7 @@ OC.L10N.register(
     "Enable Path Style" : "Yol biçemi kullanılsın",
     "Legacy (v2) authentication" : "Eski (v2) kimlik doğrulama",
     "Enable multipart copy" : "Çok parçalı kopya kullanılsın",
+    "SSE-C encryption key" : "SSE-C şifreleme anahtarı",
     "WebDAV" : "WebDAV",
     "URL" : "Adres",
     "Remote subfolder" : "Uzak alt klasör",
@@ -149,7 +150,6 @@ OC.L10N.register(
     "All people" : "Tüm kişiler",
     "Advanced settings" : "Gelişmiş ayarlar",
     "Allow people to mount external storage" : "Kişiler dış depolama bağlayabilsin",
-    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Aynı kimlik doğrulama bilgilerini kullanan bir çok dış depolama aygıtına genel kimlik doğrulama bilgileri ile erişebilirsiniz.",
-    "To access the storage, you need to provide the authentification informations." : "Depolama alanına erişebilmek için kimlik doğrulama bilgilerini vermeniz gerekir."
+    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "Aynı kimlik doğrulama bilgilerini kullanan bir çok dış depolama aygıtına genel kimlik doğrulama bilgileri ile erişebilirsiniz."
 },
 "nplurals=2; plural=(n > 1);");

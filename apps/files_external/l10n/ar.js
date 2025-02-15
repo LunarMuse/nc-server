@@ -62,6 +62,7 @@ OC.L10N.register(
     "Enable Path Style" : "تمكين نمط المسار Path Style",
     "Legacy (v2) authentication" : "المصادقة القديمة (الإصدار 2) Legacy authentication",
     "Enable multipart copy" : "تمكين النسخ المُجزّأ",
+    "SSE-C encryption key" : "مفتاح تشفير SSE-C",
     "WebDAV" : "WebDAV",
     "URL" : "عنوان URL",
     "Remote subfolder" : "مُجلّد فرعي بعيد remote sunfolder",
@@ -149,7 +150,6 @@ OC.L10N.register(
     "All people" : "كُلَّ الأشخاص",
     "Advanced settings" : "إعدادات متقدمة",
     "Allow people to mount external storage" : "السماح للأشخاص بثبيت وحدات تخزين خارجية",
-    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "بيانات تسجيل الدخول الشاملة تستخدم للتحقق من عدة وحدات تخزين خارجية لها نفس بيانات تسجيل الدخول.",
-    "To access the storage, you need to provide the authentification informations." : "للوصول إلى وحدة التخزين، يتوجب عليك إعطاء بيانات التصديق."
+    "Global credentials can be used to authenticate with multiple external storages that have the same credentials." : "بيانات تسجيل الدخول الشاملة تستخدم للتحقق من عدة وحدات تخزين خارجية لها نفس بيانات تسجيل الدخول."
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");

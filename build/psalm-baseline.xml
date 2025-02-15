@@ -543,12 +543,6 @@
       <code><![CDATA[bool]]></code>
     </InvalidReturnType>
   </file>
-  <file src="apps/dav/lib/HookManager.php">
-    <InvalidPropertyAssignmentValue>
-      <code><![CDATA[$this->usersToDelete]]></code>
-      <code><![CDATA[$this->usersToDelete]]></code>
-    </InvalidPropertyAssignmentValue>
-  </file>
   <file src="apps/dav/lib/Migration/BuildCalendarSearchIndexBackgroundJob.php">
     <ParamNameMismatch>
       <code><![CDATA[$arguments]]></code>
@@ -872,11 +866,6 @@
     <MoreSpecificReturnType>
       <code><![CDATA[Mount]]></code>
     </MoreSpecificReturnType>
-  </file>
-  <file src="apps/files_sharing/lib/External/Scanner.php">
-    <MoreSpecificImplementedParamType>
-      <code><![CDATA[$cacheData]]></code>
-    </MoreSpecificImplementedParamType>
   </file>
   <file src="apps/files_sharing/lib/MountProvider.php">
     <RedundantFunctionCall>
@@ -1239,12 +1228,6 @@
     <InvalidScalarArgument>
       <code><![CDATA[$this->timeFactory->getTime()]]></code>
     </InvalidScalarArgument>
-  </file>
-  <file src="core/Command/Maintenance/Mimetype/UpdateDB.php">
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[getAllMappings]]></code>
-      <code><![CDATA[updateFilecache]]></code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="core/Command/Preview/Repair.php">
     <UndefinedInterfaceMethod>
@@ -1758,14 +1741,10 @@
     </MoreSpecificReturnType>
   </file>
   <file src="lib/private/Files/Cache/Cache.php">
-    <InvalidArgument>
-      <code><![CDATA[$parentData]]></code>
-    </InvalidArgument>
     <InvalidNullableReturnType>
       <code><![CDATA[array]]></code>
     </InvalidNullableReturnType>
     <InvalidScalarArgument>
-      <code><![CDATA[$path]]></code>
       <code><![CDATA[\OC_Util::normalizeUnicode($path)]]></code>
     </InvalidScalarArgument>
     <NullableReturnStatement>
@@ -1796,12 +1775,6 @@
     <InvalidArgument>
       <code><![CDATA[self::SCAN_RECURSIVE_INCOMPLETE]]></code>
     </InvalidArgument>
-    <InvalidReturnStatement>
-      <code><![CDATA[$existingChildren]]></code>
-    </InvalidReturnStatement>
-    <InvalidReturnType>
-      <code><![CDATA[array[]]]></code>
-    </InvalidReturnType>
   </file>
   <file src="lib/private/Files/Cache/Storage.php">
     <InvalidNullableReturnType>
@@ -2296,6 +2269,14 @@
       <code><![CDATA[?IImage]]></code>
     </InvalidReturnType>
   </file>
+  <file src="lib/private/Profile/Actions/FediverseAction.php">
+    <NoValue>
+      <code><![CDATA[$instance]]></code>
+    </NoValue>
+    <RedundantCondition>
+      <code><![CDATA[$instance === '']]></code>
+    </RedundantCondition>
+  </file>
   <file src="lib/private/RedisFactory.php">
     <InvalidArgument>
       <code><![CDATA[\RedisCluster::OPT_SLAVE_FAILOVER]]></code>
@@ -2357,11 +2338,6 @@
     <NullableReturnStatement>
       <code><![CDATA[$this->collectionName]]></code>
     </NullableReturnStatement>
-  </file>
-  <file src="lib/private/Security/Bruteforce/Throttler.php">
-    <NullArgument>
-      <code><![CDATA[null]]></code>
-    </NullArgument>
   </file>
   <file src="lib/private/Security/CSP/ContentSecurityPolicyNonceManager.php">
     <NoInterfaceProperties>
